@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./app.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <title>DS Typography</title>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="manifest" href="./img//site.webmanifest">
+  <link rel="mask-icon" href="./img//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#D61A65">
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- tabs start here -->
+    <div class="tabs-wrapper">
+      <ul>
+        <li><button id="title-btn" class="btn active">Title</button></li>
+        <li><button id="size-btn" class="btn">Size</button></li>
+        <li><button id="weight-btn" class="btn">Weight</button></li>
+        <li><button id="height-btn" class="btn">Height</button></li>
+      </ul>
+    </div>
+    <!-- tabs end here -->
+
+    <!-- search starts here -->
+    <div class="input-wrapper">
+      <input type="text" id="search-input" onkeyup="titleSearch()" placeholder="Search typography styles" />
+    </div>
+    <!-- search ends here -->
+
+    <!-- no result starts here -->
+    <div id="no-results" class="hidden">
+      <p>I'm sorry, did you Kebab!</p>
+    </div>
+    <!-- no result ends here -->
+
+    <ul id="cards">
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Background Lg </h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>160</span></li>
+              <li>Font weight: <span>bold</span></li>
+              <li class="hidden"><span></span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <!-- <li>Android</li>
+                <li>iOS</li> -->
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-bg-lg">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Background Md </h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>120</span></li>
+              <li>Font weight: <span>bold</span></li>
+              <li class="hidden"><span></span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <!-- <li>Android</li>
+                <li>iOS</li> -->
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-bg-md">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Background Sm </h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>80</span></li>
+              <li>Font weight: <span>bold</span></li>
+              <li class="hidden"><span></span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <!-- <li>Android</li>
+                <li>iOS</li> -->
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-bg-sm">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Display Regular</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>32</span></li>
+              <li>Font weight: <span>ultralight</span></li>
+              <li>Line height: <span>40</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <!-- <li>Web</li> -->
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-display-regular">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Xxl</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>40</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li class="hidden"><span></span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <!-- <li>Android</li>
+                <li>iOS</li> -->
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-xxl">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Xl</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>32</span></li>
+              <li>Font weight: <span>bold</span></li>
+              <li>Line height: <span>40</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-xl">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Xl Secondary</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>32</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>40</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-xl-secondary">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Lg</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>24</span></li>
+              <li>Font weight: <span>semibold</span></li>
+              <li>Line height: <span>32</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-lg">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Lg Secondary</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>24</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>32</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-lg-secondary">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Md</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>18</span></li>
+              <li>Font weight: <span>medium</span></li>
+              <li>Line height: <span>22</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-md">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Md Secondary</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>18</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>20</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-md-secondary">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Title Sm</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>16</span></li>
+              <li>Font weight: <span>medium</span></li>
+              <li>Line height: <span>20</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="typography-title-sm">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Paragraph Md</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>16</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>20</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="paragraph-md">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Paragraph Sm</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>14</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>18</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="paragraph-sm">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Paragraph Xs</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>12</span></li>
+              <li>Font weight: <span>medium</span></li>
+              <li>Line height: <span>16</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="paragraph-xs">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Paragraph Xs Secondary</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>12</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>16</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="paragraph-xs-secondary">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Label Md</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>14</span></li>
+              <li>Font weight: <span>medium</span></li>
+              <li>Line height: <span>18</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="label-md">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Label Sm</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>12</span></li>
+              <li>Font weight: <span>semibold</span></li>
+              <li>Line height: <span>16</span></li>
+              <li>Case: <span>uppercase</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="label-sm">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Label Sm Secondary</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>12</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>16</span></li>
+              <li>Case: <span>uppercase</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="label-sm-secondary">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Link Sm</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>14</span></li>
+              <li>Font weight: <span>light</span></li>
+              <li>Line height: <span>18</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="link-sm">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Ribbon</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>14</span></li>
+              <li>Font weight: <span>regular</span></li>
+              <li>Line height: <span>18</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="ribbon">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+
+      <li>
+        <!-- card starts here -->
+        <div class="card">
+          <h3 class="typography-name">Mini</h3>
+          <div class="typography-specs">
+            <ul>
+              <li>Font size: <span>10</span></li>
+              <li>Font weight: <span>medium</span></li>
+              <li>Line height: <span>12</span></li>
+            </ul>
+          </div>
+          <div class="supported-devices">
+            <ul>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="example-btn-container">
+            <button class="show-eample-btn">Show example</button>
+          </div>
+          <div class="example">
+            <p class="mini">Hello World</p>
+          </div>
+        </div>
+        <!-- end of the card -->
+      </li>
+    </ul>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
+
+<!-- https://www.w3schools.com/howto/howto_js_filter_lists.asp -->
+
+<!-- todo -->
+<!-- click the platform tag to show the name of the typography style on that platform -->
